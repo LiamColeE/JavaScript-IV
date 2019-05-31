@@ -1,68 +1,68 @@
 // CODE here for your Lambda Classes
-class Person{
-    constructor(personAttrs){
+class Person {
+    constructor(personAttrs) {
         this.name = personAttrs.name;
         this.age = personAttrs.age;
         this.location = personAttrs.location;
     }
 
-    speak(){
+    speak() {
         console.log(`Hello, my name is ${this.name}, I am from ${this.location}`);
     }
 }
 
-class Instructor extends Person{
-    constructor(instructorAttrs){
+class Instructor extends Person {
+    constructor(instructorAttrs) {
         super(instructorAttrs);
         this.specialty = instructorAttrs.specialty;
         this.favLanguage = instructorAttrs.favLanguage;
         this.catchPhrase = instructorAttrs.catchPhrase;
     }
 
-    demo(subject){
+    demo(subject) {
         console.log(`Today we are learning about ${subject}`);
     }
 
-    grade(student, subject){
+    grade(student, subject) {
         console.log(`${student.name} receives a perfect score on ${subject}`);
     }
 }
 
-class Student extends Person{
-    constructor(studentAttrs){
+class Student extends Person {
+    constructor(studentAttrs) {
         super(studentAttrs);
         this.previousBackground = studentAttrs.previousBackground;
         this.className = studentAttrs.className;
         this.favSubjects = studentAttrs.favSubjects;
     }
 
-    listsSubjects(){
+    listsSubjects() {
         this.favSubjects.forEach(element => {
             console.log(element);
         });
     }
 
-    PRAssignment(subject){
+    PRAssignment(subject) {
         console.log(`${this.name} has submitted a PR for ${subject}`);
     }
 
-    sprintChallenge(subject){
+    sprintChallenge(subject) {
         console.log(`${this.name} has begun sprint challenge on ${subject}`);
     }
 }
 
-class ProjectManager extends Instructor{
-    constructor(PMAttrs){
+class ProjectManager extends Instructor {
+    constructor(PMAttrs) {
         super(PMAttrs);
         this.gradClassName = PMAttrs.gradClassName;
         this.favInstructor = PMAttrs.favInstructor;
     }
 
-    standUp(slackChannel){
+    standUp(slackChannel) {
         console.log(`${this.name} announces to ${slackChannel}, @channel standup times!`);
     }
 
-    debugCode(student, subject){
+    debugCode(student, subject) {
         console.log(`${this.name} debugs ${student.name}'s code on ${subject}`);
     }
 }
@@ -85,7 +85,7 @@ const Dan = new Instructor({
     catchPhrase: "Have a nice day!"
 });
 
-const Jacob = new ProjectManager({ 
+const Jacob = new ProjectManager({
     name: "Jacob Angulo",
     age: 24,
     location: "MiniSoda",
@@ -96,7 +96,7 @@ const Jacob = new ProjectManager({
     favInstructor: "Dan Frehner"
 });
 
-const Sasha = new ProjectManager({ 
+const Sasha = new ProjectManager({
     name: "Sasha Taylor",
     age: 25,
     location: "KnowWhere",
