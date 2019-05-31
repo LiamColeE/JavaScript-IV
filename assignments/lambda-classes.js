@@ -158,3 +158,11 @@ Cameron.demo("PreProccesing");
 Dan.grade(Liam, "unreadable code");
 Cameron.grade(Patrick, "learning real good");
 
+console.log(`${Liam.name}, ${Liam.age}, ${Liam.className}, ${Liam.location}, ${Liam.previousBackground}`)
+console.log(`${Patrick.name}, ${Patrick.age}, ${Patrick.className}, ${Patrick.location}, ${Patrick.previousBackground}`)
+
+console.log(`${Dan.name}, ${Dan.age}, ${Dan.catchPhrase}, ${Dan.favLanguage}, ${Dan.location}, ${Dan.specialty}`);
+console.log(`${Cameron.name}, ${Cameron.age}, ${Cameron.catchPhrase}, ${Cameron.favLanguage}, ${Cameron.location}, ${Cameron.specialty}`);
+
+console.log(`${Jacob.name}, ${Jacob.age}, ${Jacob.catchPhrase}, ${Jacob.favLanguage}, ${Jacob.location}, ${Jacob.specialty}, ${Jacob.favInstructor}, ${Jacob.gradClassName}`);
+console.log(`${Sasha.name}, ${Sasha.age}, ${Sasha.catchPhrase}, ${Sasha.favLanguage}, ${Sasha.location}, ${Sasha.specialty}, ${Sasha.favInstructor}, ${Sasha.gradClassName}`);
