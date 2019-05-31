@@ -149,4 +149,12 @@ Sasha.demo("CSS");
 Jacob.debugCode(Liam, "Potatoes");
 Sasha.debugCode(Patrick, "Computering");
 
+Dan.speak();
+Cameron.speak();
+
+Dan.demo("React");
+Cameron.demo("PreProccesing");
+
+Dan.grade(Liam, "unreadable code");
+Cameron.grade(Patrick, "learning real good");
 
