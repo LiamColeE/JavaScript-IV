@@ -43,17 +43,26 @@ class Student extends Person{
     }
 
     PRAssignment(subject){
-        console.log(`${this.name} has submitted a PR for ${subject}`)
+        console.log(`${this.name} has submitted a PR for ${subject}`);
     }
 
     sprintChallenge(subject){
-        console.log(`${this.name} has begun sprint challenge on ${subject}`)
+        console.log(`${this.name} has begun sprint challenge on ${subject}`);
     }
 }
 
 class ProjectManager extends Instructor{
     constructor(PMAttrs){
         super(PMAttrs);
-        
+        this.gradClassName = PMAttrs.gradClassName;
+        this.favInstructor = PMAttrs.favInstructor;
+    }
+
+    standUp(slackChannel){
+        console.log(`${this.name} announces to ${slackChannel}, @channel standup times!`);
+    }
+
+    debugCode(student, subject){
+        console.log(`${this.name} debugs ${student.name}'s code on ${subject}`);
     }
 }
