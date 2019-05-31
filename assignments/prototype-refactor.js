@@ -31,7 +31,7 @@ class CharacterStats extends GameObject {
         this.healthPoints = characterStats.healthPoints;
     }
 
-    takeDamage(){
+    takeDamage() {
         return `${this.name} took damage`
     }
 }
@@ -45,15 +45,15 @@ class CharacterStats extends GameObject {
   * should inherit destroy() from GameObject through CharacterStats
   * should inherit takeDamage() from CharacterStats
 */
-class Humanoid extends CharacterStats{
-    constructor(humanoidAttributes){
+class Humanoid extends CharacterStats {
+    constructor(humanoidAttributes) {
         super(humanoidAttributes);
         this.team = humanoidAttributes.team;
         this.weapons = humanoidAttributes.weapons;
         this.language = humanoidAttributes.language;
     }
 
-    greet(){
+    greet() {
         return `${this.name} offers a greeting in ${this.language}`
     }
 }
