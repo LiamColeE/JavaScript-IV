@@ -37,7 +37,7 @@ class Student extends Person{
     }
 
     listsSubjects(){
-        this.favSubjects.array.forEach(element => {
+        this.favSubjects.forEach(element => {
             console.log(element);
         });
     }
@@ -66,3 +66,87 @@ class ProjectManager extends Instructor{
         console.log(`${this.name} debugs ${student.name}'s code on ${subject}`);
     }
 }
+
+const Cameron = new Instructor({
+    name: "Cameron Pope",
+    age: 30,
+    location: "PotatoVille",
+    specialty: "Being Awesome",
+    favLanguage: "CSS",
+    catchPhrase: "yeet"
+});
+
+const Dan = new Instructor({
+    name: "Dan Frehner",
+    age: 28,
+    location: "Lambda School",
+    specialty: "Being Cam's replacement instructor",
+    favLanguage: "javascript",
+    catchPhrase: "Have a nice day!"
+});
+
+const Jacob = new ProjectManager({ 
+    name: "Jacob Angulo",
+    age: 24,
+    location: "MiniSoda",
+    specialty: "Being The Best PM",
+    favLanguage: "Python",
+    catchPhrase: "STANDUP TIME!",
+    gradClassName: "CS1",
+    favInstructor: "Dan Frehner"
+});
+
+const Sasha = new ProjectManager({ 
+    name: "Sasha Taylor",
+    age: 25,
+    location: "KnowWhere",
+    specialty: "coming in clutch when jacob isnt here",
+    favLanguage: "Java",
+    catchPhrase: "Hey guys Jacob will be out today",
+    gradClassName: "CS5",
+    favInstructor: "Cameron Pope"
+});
+
+const Liam = new Student({
+    name: "Liam Edlinger",
+    age: 20,
+    location: "Utah",
+    previousBackground: "CS stuff but no credentials so sad",
+    className: "WebPT7",
+    favSubjects: ["CS", "webdev", "potato"],
+})
+
+const Patrick = new Student({
+    name: "Patrick Shushereba",
+    age: 23,
+    location: "SumWhere",
+    previousBackground: "IDK",
+    className: "WebPT7",
+    favSubjects: ["WebDev", "computer stuffs", "potato"],
+})
+
+Liam.listsSubjects();
+Patrick.listsSubjects();
+
+Liam.speak();
+Patrick.speak();
+
+Liam.sprintChallenge("Javascript Fundamentals");
+Patrick.sprintChallenge("Javascript Fundamentals");
+
+Jacob.speak();
+Sasha.speak();
+
+Jacob.standUp("Webpt7_Jacob");
+Sasha.standUp("Webpt7_Jacob");
+
+Jacob.grade(Liam, "CS Stuff");
+Sasha.grade(Patrick, "Web Dev");
+
+Jacob.demo("Javascript");
+Sasha.demo("CSS");
+
+Jacob.debugCode(Liam, "Potatoes");
+Sasha.debugCode(Patrick, "Computering");
+
+
